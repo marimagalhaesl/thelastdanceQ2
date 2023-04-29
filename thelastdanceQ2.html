@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Lista de Oportunidades" icon-name="standard:opportunity">
+
+        <ul class="slds-has-dividers_around-space slds-var-m-around_medium">
+
+            <template for:each={opportunities} for:item="opportunity">
+
+                <li key={opportunity.Id} class="slds-item">
+
+                    <span style="color: rgb(0, 0, 0);">
+                        <p><strong>Id: </strong>{opportunity.Id} </p>
+                    </span>
+
+                    <span style="color: rgb(0, 0, 0);">
+                        <p><strong>Nome: </strong>{opportunity.Name} </p>
+                    </span>
+
+                    <span style="color: rgb(0, 0, 0);">
+                        <p> <strong>Valor:</strong> R$ {opportunity.Amount}</p>
+                    </span>
+
+                    <span style="color: rgb(0, 0, 0);">
+                        <p><strong>Fase: </strong>{opportunity.StageName}</p>
+                    </span>
+
+                    <span style="color: rgb(0, 0, 0);">
+                        <p><strong>Criado em: </strong>{opportunity.CreatedDate}</p>
+                    </span>
+
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>
